@@ -43,7 +43,7 @@ export default function VerificationPage() {
   const handleResendCode = async () => {
     try {
       setResendDisabled(true);
-      const success = await AuthService.generateOtp(username);
+      const success = await AuthService.generateOtp();
       
       if (success) {
         toast.success("A new verification code has been sent to your email");
